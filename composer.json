@@ -1,0 +1,11 @@
+{
+    "name": "jwdr/zyxel",
+    "description": "Alows remote reading of statistics of ZyXEL  VMG8324-B10A",
+    "authors": [
+        {
+            "name": "JWdR",
+            "email": "janwillem@jwdr.nl"
+        }
+    ],
+    "require": {}
+}
