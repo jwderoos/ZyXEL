@@ -26,6 +26,5 @@
     "psr-4": {
       "jwdr\\tests\\": "tests/"
     }
-  },
-  "minimum-stability" : "dev"
+  }
 }
