@@ -12,9 +12,21 @@ use ValueObjects\Web\IPAddress;
 
 class LanHost
 {
+    /**
+     * @var MacAddress
+     */
     private $macAddress;
+    /**
+     * @var IPAddress
+     */
     private $ipAddress;
+    /**
+     * @var Integer
+     */
     private $leaseTimeOut;
+    /**
+     * @var Hostname
+     */
     private $hostName;
 
     /**
@@ -77,4 +89,37 @@ class LanHost
         $this->leaseTimeOut = $leaseTimeOut;
         $this->hostName = $hostName;
     }
+
+    /**
+     * @return MacAddress
+     */
+    public function getMacAddress()
+    {
+        return $this->macAddress;
+    }
+
+    /**
+     * @return IPAddress
+     */
+    public function getIpAddress()
+    {
+        return $this->ipAddress;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLeaseTimeOut()
+    {
+        return $this->leaseTimeOut;
+    }
+
+    /**
+     * @return Hostname
+     */
+    public function getHostName()
+    {
+        return $this->hostName;
+    }
+
 }
