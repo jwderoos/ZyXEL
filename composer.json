@@ -1,11 +1,30 @@
 {
-    "name": "jwdr/zyxel",
-    "description": "Alows remote reading of statistics of ZyXEL  VMG8324-B10A",
-    "authors": [
-        {
-            "name": "JWdR",
-            "email": "janwillem@jwdr.nl"
-        }
-    ],
-    "require": {}
+  "name": "jwdr/ZyXEL",
+  "description": "Allows remote reading of statistics of ZyXEL VMG8324-B10A",
+  "authors": [
+    {
+      "name": "JWdR",
+      "email": "janwillem@jwdr.nl"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "nicolopignatelli/valueobjects": "~2.0",
+    "ext-ssh2": "*"
+  },
+  "require-dev":{
+    "phpunit/phpunit" : "~5.0.8"
+
+  },
+  "autoload": {
+    "psr-4": {
+      "jwdr\\ZyXEL\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "jwdr\\tests\\": "tests/"
+    }
+  },
+  "minimum-stability" : "dev"
 }
