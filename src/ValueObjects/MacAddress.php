@@ -3,9 +3,9 @@
 namespace jwdr\ZyXEL\ValueObjects;
 
 use ValueObjects\Exception\InvalidNativeArgumentException;
-use ValueObjects\String\String;
+use ValueObjects\StringLiteral\StringLiteral;
 
-class MacAddress extends String
+class MacAddress extends StringLiteral
 {
     /**
      * Returns a new MacAddress

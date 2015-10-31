@@ -2,7 +2,7 @@
 
 namespace jwdr\ZyXEL;
 
-use ValueObjects\String\String as ValueString;
+use ValueObjects\StringLiteral\StringLiteral;
 use ValueObjects\Web\IPAddress;
 use ValueObjects\Web\PortNumber;
 class Config
@@ -16,15 +16,15 @@ class Config
      */
     private $portNumber;
     /**
-     * @var ValueString
+     * @var StringLiteral
      */
     private $userName;
     /**
-     * @var ValueString
+     * @var StringLiteral
      */
     private $passWord;
 
-    function __construct(IPAddress $ipAddress, PortNumber $portNumber, ValueString $userName, ValueString $passWord)
+    function __construct(IPAddress $ipAddress, PortNumber $portNumber, StringLiteral $userName, StringLiteral $passWord)
     {
         $this->ipAddress = $ipAddress;
         $this->portNumber = $portNumber;
@@ -49,7 +49,7 @@ class Config
     }
 
     /**
-     * @return ValueString
+     * @return StringLiteral
      */
     public function getUserName()
     {
@@ -57,7 +57,7 @@ class Config
     }
 
     /**
-     * @return ValueString
+     * @return StringLiteral
      */
     public function getPassWord()
     {
