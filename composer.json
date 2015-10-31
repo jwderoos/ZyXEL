@@ -1,5 +1,5 @@
 {
-  "name": "jwdr/ZyXEL",
+  "name": "jwdr/zyxel",
   "description": "Allows remote reading of statistics of ZyXEL VMG8324-B10A",
   "authors": [
     {
