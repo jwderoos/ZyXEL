@@ -6,11 +6,13 @@ Installation
 
 The best way to add the library to your project is using [composer](http://getcomposer.org).
 
+```json
 {
     "require": {
         "jwdr/ZyXEL": "*"
     }
 }
+```
 
 How it works
 ------------
