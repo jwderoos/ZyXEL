@@ -1,6 +1,6 @@
 <?php
 
-namespace jwdr\ZyXEL;
+namespace jwdr\ZyXEL\Exceptions;
 
 class ConnectionFailedException extends \Exception
 {

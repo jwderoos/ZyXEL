@@ -2,6 +2,7 @@
 
 namespace jwdr\ZyXEL;
 
+use jwdr\ZyXEL\Exceptions\ConnectionFailedException;
 class Connection
 {
     private $connection;
