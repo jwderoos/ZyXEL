@@ -2,7 +2,7 @@
 
 namespace jwdr\ZyXEL\Exceptions;
 
-class ConnectionFailedException extends \Exception
+class ConnectionFailed extends \Exception
 {
 
 }

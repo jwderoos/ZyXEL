@@ -2,7 +2,7 @@
 
 namespace jwdr\ZyXEL;
 
-use jwdr\ZyXEL\Exceptions\ConnectionFailedException;
+use jwdr\ZyXEL\Exceptions\ConnectionFailed;
 class Connection
 {
     private $connection;
@@ -20,7 +20,7 @@ class Connection
         $connection = ssh2_connect($config->getIpAddress(), $config->getPortNumber());
 
         if ($connection === false) {
-            throw new ConnectionFailedException('ZyXEL could not be reached');
+            throw new ConnectionFailed('ZyXEL could not be reached');
         }
 
         return $connection;
@@ -30,14 +30,14 @@ class Connection
      * @param resource $connection
      * @param Config $config
      * @return resource
-     * @throws ConnectionFailedException
+     * @throws ConnectionFailed
      */
     private function authenticateConnection($connection, Config $config)
     {
         $auth = @ssh2_auth_password($connection, $config->getUserName(), $config->getPassWord());
 
         if (!$auth) {
-            throw new ConnectionFailedException('Authentication with ZyXEL failed');
+            throw new ConnectionFailed('Authentication with ZyXEL failed');
         }
 
         return $connection;
