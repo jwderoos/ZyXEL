@@ -9,7 +9,7 @@ The best way to add the library to your project is using [composer](http://getco
 ```json
 {
     "require": {
-        "jwdr/ZyXEL": "*"
+        "jwdr/zyxel": "*"
     }
 }
 ```
