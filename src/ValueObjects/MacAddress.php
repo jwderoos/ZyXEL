@@ -14,13 +14,11 @@ class MacAddress extends StringLiteral
      */
     public function __construct($value)
     {
-        $filteredValue = filter_var($value, FILTER_VALIDATE_IP);
-
         if (!$this->isValid($value)) {
             throw new InvalidNativeArgumentException($value, ['string (valid mac address)']);
         }
 
-        $this->value = $this->filter($filteredValue);
+        $this->value = $this->filter($value);
     }
 
     protected function isValid($value)
