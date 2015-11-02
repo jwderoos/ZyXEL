@@ -36,7 +36,9 @@ $ZyXEL = new \jwdr\ZyXEL\ZyXEL($ZyXELConnection);
 ```
 Finally ready to start reading information from the router!
 
-Get the current connected lan devices
+Get the list of current known lan host devices
 ```php
 $lanHosts = $ZyXEL->lanHosts();
 ```
+
+More to follow
