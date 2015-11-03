@@ -2,10 +2,11 @@
 
 namespace jwdr\ZyXEL\Output\Exceptions;
 
-class IsBridgeRecord extends \Exception
+class FieldCountDoesNotMatchHeader extends \Exception
 {
     function __construct()
     {
         $this->message = "Bridge identification record";
+
     }
 }
