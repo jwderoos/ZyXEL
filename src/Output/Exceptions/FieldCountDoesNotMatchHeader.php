@@ -4,9 +4,12 @@ namespace jwdr\ZyXEL\Output\Exceptions;
 
 class FieldCountDoesNotMatchHeader extends \Exception
 {
-    function __construct()
+    public function __construct($header, $fields)
     {
-        $this->message = "Bridge identification record";
-
+        $this->message = sprintf(
+            "Header and field counts do not match: %d - %d",
+            count($header),
+            count($fields)
+        );
     }
 }

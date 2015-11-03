@@ -4,58 +4,58 @@ namespace jwdr\ZyXEL\Output;
 
 use jwdr\ZyXEL\Output\Exceptions\FieldCountDoesNotMatchHeader;
 use jwdr\ZyXEL\Output\Exceptions\IsHeaderRecord;
-class LanHosts extends AbstractResultCollection
+class ArpHosts extends AbstractResultCollection
 {
 
     /**
      * @param string[] $rawData
-     * @return LanHosts
+     * @return ArpHosts
      */
     public static function fromRawData($rawData)
     {
-        $lanHosts = new self();
-        $lanHosts->addLanHostsFromRawData($rawData);
+        $ArpHosts = new self();
+        $ArpHosts->addArpHostsFromRawData($rawData);
 
-        return $lanHosts;
+        return $ArpHosts;
     }
 
     /**
      * @param string[] $rawData
      */
-    protected function addLanHostsFromRawData($rawData)
+    protected function addArpHostsFromRawData($rawData)
     {
         foreach ($rawData as $rawRecord) {
-            $this->addLanHostFromRaw($rawRecord);
+            $this->addArpHostFromRaw($rawRecord);
         }
     }
 
     /**
      * @param string $rawRecord
      */
-    protected function addLanHostFromRaw($rawRecord)
+    protected function addArpHostFromRaw($rawRecord)
     {
         try {
-            $lanHost = LanHost::fromRawData($rawRecord);
-            $this->addLanHost($lanHost);
+            $ArpHost = ArpHost::fromRawData($rawRecord);
+            $this->addArpHost($ArpHost);
         } catch (FieldCountDoesNotMatchHeader $e) {
         } catch (IsHeaderRecord $e) {
         }
     }
 
     /**
-     * @param LanHost $lanHost
-     * @return $this
+     * @param ArpHost $ArpHost
+     * @return ArpHosts
      */
-    public function addLanHost(LanHost $lanHost)
+    public function addArpHost(ArpHost $ArpHost)
     {
-        $this->addOnce($lanHost);
+        $this->addOnce($ArpHost);
 
         return $this;
     }
 
     /**
      * @param mixed $offset
-     * @return LanHost
+     * @return ArpHost
      */
     public function offsetGet($offset)
     {
@@ -63,7 +63,7 @@ class LanHosts extends AbstractResultCollection
     }
 
     /**
-     * @return LanHost
+     * @return ArpHost
      */
     public function current()
     {
