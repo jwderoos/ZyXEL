@@ -13,9 +13,8 @@
     "nicolopignatelli/valueobjects": "~3.0",
     "ext-ssh2": "*"
   },
-  "require-dev":{
-    "phpunit/phpunit" : "~5.0.8"
-
+  "require-dev": {
+    "phpunit/phpunit": "~5.0.8"
   },
   "autoload": {
     "psr-4": {
